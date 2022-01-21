@@ -2,12 +2,19 @@
 
 This project is developed to create a TODO task list for a specific user.
 
+## Requirements
+
+Only having **Docker**  and **Postman** already installed in your OS.
+
+* Installation guide -> ```https://docs.docker.com/``` and ```https://learning.postman.com/docs```
+
 ## Instructions
 
-Before running the app, fill config folder. (Write MongoDb database url to index.js, add username and password to config.json file.)
+Before running Docker, fill config folder. (Write MongoDb database url to index.js, add username and password to config.json file.)
 Then execute the following command on the project's main directory
 
-* ```node app.js```
+* ```docker build . ```  or  ```docker build . -t <imageName>```
+* ``` docker run -p 8080:8080 -e PORT=8080 -d <imageId> ```
 
 ## Examples
 
