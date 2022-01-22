@@ -1,10 +1,5 @@
-var configValues=require('./config.json');
-
-module.exports={
-    getDbConnectionString: function(){
-        return 'here your mongodb url';
-    }
-}
-
-
-
+module.exports = {
+  getDbConnectionString: function () {
+    return "mongodb+srv://admin:1234@cluster0.38lv9.mongodb.net/node-todo?retryWrites=true&w=majority";
+  },
+};

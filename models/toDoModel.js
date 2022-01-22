@@ -1,12 +1,12 @@
-var mongoose= require('mongoose');
-var Schema =mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-var todoSchema = new Schema({
-    username: String,
-    todo:String,
-    isDone:Boolean,
-    hasAttachment:Boolean
+const todoSchema = new Schema({
+  username: String,
+  todo: String,
+  isDone: Boolean,
+  hasAttachment: Boolean,
 });
 
-var todos= mongoose.model('todos',todoSchema);
-module.exports=todos;
+const todos = mongoose.model("todos", todoSchema);
+module.exports = todos;

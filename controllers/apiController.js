@@ -1,5 +1,5 @@
-var todos = require("../models/toDoModel");
-var bodyparser = require("body-parser");
+const todos = require("../models/toDoModel");
+const bodyparser = require("body-parser");
 
 module.exports = function (app) {
   app.use(bodyparser.json());
@@ -50,23 +50,22 @@ module.exports = function (app) {
   app.put("/api/todo/:id", function (req, res) {
     todos.findByIdAndUpdate(
       { _id: req.params.id },
-        {
-          todo: req.body.todo,
-          isDone: req.body.isDone,
-          hasAttachment: req.body.hasAttachment,
-        },
-        function (err, todo) {
-          if (err) throw err;
-          res.send("Success");
-        }
-      );
-    
+      {
+        todo: req.body.todo,
+        isDone: req.body.isDone,
+        hasAttachment: req.body.hasAttachment,
+      },
+      function (err, todo) {
+        if (err) throw err;
+        res.send("Success");
+      }
+    );
   });
 
   app.delete("/api/todo/:id", function (req, res) {
-    todos.findByIdAndRemove({ _id: req.params.id }, function(err){
-        if(err) throw err;
-        res.send('Success');
+    todos.findByIdAndRemove({ _id: req.params.id }, function (err) {
+      if (err) throw err;
+      res.send("Success");
     });
   });
 };

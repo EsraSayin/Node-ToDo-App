@@ -13,8 +13,9 @@ Only having **Docker**  and **Postman** already installed in your OS.
 Before running Docker, fill config folder. (Write MongoDb database url to index.js, add username and password to config.json file.)
 Then execute the following command on the project's main directory
 
-* ```docker build . ```  or  ```docker build . -t <imageName>```
-* ``` docker run -p 8080:8080 -e PORT=8080 -d <imageId> ```
+* ```docker-compose build```
+
+* ```docker-compose up``` or ```docker-compose up -d``` 
 
 ## Examples
 
